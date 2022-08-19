@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend:{
+                    colors: {
+                        textColor: '#433A38',
+                        importantTextColor: '#9E871C',
+                        cardBack: '#F7F7F6',
+                        footerBg: '#F6F4EB'
+                    },
+                    backgroundImage:{
+                        'hero': "url('https://upload.wikimedia.org/wikipedia/commons/5/5f/HistoricMNsupreme.JPG')"
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js" integrity="sha512-6m6AtgVSg7JzStQBuIpqoVuGPVSAK5Sp/ti6ySu6AjRDa1pX8mIl1TwP9QmKXU+4Mhq/73SzOk6mbNvyj9MPzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>home - law</title>
+</head>
+<body class="mx-auto max-w-screen-xl">
+    <header class="w-full">
+        <nav x-data="{ isOpen: false}" class="bg-white flex justify-between p-4 lg:p-8">
+            <div class="flex items-center">
+                <h3 class="text-textColor font-bold">
+                    law <span class="text-importantTextColor"> logo</span>
+                </h3>
+            </div>
+            <!-- right navigation section // start -->
+            <div class="flex items-center justify-between">
+                <button @click="isOpen = !isOpen" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-textColor lg:hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <!-- LG nav -->
+                <div class="hidden space-x-16 lg:inline-block">
+                    <a href="#" class="text-textColor text-2xl font-bold capitalize"> about us</a>
+                    <a href="#" class="text-textColor text-2xl font-bold capitalize"> pratice area</a>
+                    <a href="#" class="text-textColor text-2xl font-bold capitalize"> news</a>
+                    <a href="#" class="text-textColor text-2xl font-bold capitalize"> carreers</a>
+                    
+                    <a href="#" class="text-white text-lg bg-textColor px-8 py-3 rounded-3xl font-bold capitalize"> contact US</a>
+                </div>
+                <!-- end -->
+                <!-- mobile nav -->
+                <div class="mobile-nav ">
+                    <!-- nav wrapper -->
+                    <div x-show="isOpen" @click.away = "isOpen = false" class="fixed lg:hidden left-0  w-full h-56 p-5 bg-textColor top-14">
+                        <div class="flex space-y-6 flex-col ">
+                            <a href="#" class="text-white text-lg font-bold capitalize"> about us</a>
+                            <a href="#" class="text-white text-lg font-bold capitalize"> pratice area</a>
+                            <a href="#" class="text-white text-lg font-bold capitalize"> news</a>
+                            <a href="#" class="text-white text-lg font-bold capitalize"> carreers</a>
+                            <a href="#" class="text-white text-lg font-bold capitalize"> carreers</a>
+                        </div>
+                    </div>
+                    <!-- end wrapper -->
+                </div>
+                <!-- end mobile view-->
+            </div>
+            <!-- end right navigation -->
+        </nav>
+        <div class="bg-cover h-full  bg-center bg-[url('https://upload.wikimedia.org/wikipedia/commons/5/5f/HistoricMNsupreme.JPG')]" >
+            <div class="flex items-end h-96">
+                <div class=" px-12 mt-16">
+                    <div class="text-white uppercase font-bold text-2xl">
+                        welcome to <span class="text-importantTextColor">
+                            scpa duga & co . law firm
+                        </span>
+                    </div>
+                    <div class="mt-5 text-white text-2xl w-3/4 font-bold ">
+                        The law firm is one of the most modern and most innovative law firms in cameroon.
+                    </div>
+                    <div class="p-8">
+                        <a href="#" class="capitalize space-x-3 text-white text-2xl flex">
+                            <span><i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8s8 3.589 8 8s-3.589 8-8 8z"/><path fill="currentColor" d="m9 17l8-5l-8-5z"/></svg>
+                            </i></span>
+                            <p>
+                                about us
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="space-y-16">
+        <section class="mt-16">
+            <div class="grid mx-20 md:grid-cols-2 px-3 gap-4 mt-4 lg:grid-cols-2 sm:grid-cols-1">
+                <div class="">
+                    <div class="small-desc">
+                        <p class=" text-4xl text-textColor font-bold ">
+                            We build successful Relationships;  treat people with Respect;  and achieve exceptional Results.
+
+                        </p>
+                        <div class="img-handler mt-16">
+                            <img class="rounded-xl" src="https://satlawproject.eu/wp-content/uploads/2021/02/1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="why mt-20 px-8 w-full">
+                        <p class="uppercase text-textColor text-3xl font-bold">
+                            why choose us ?
+                        </p>
+                        <p class="text-textColor mt-6 text-2xl ">We have 25 years of experience and Customer satisfaction with</p>
+                        <div class="mt-12 flex justify-center ">
+                            <div class="space-y-6">
+                                <div class="rounded-xl p-8  text-textColor bg-cardBack">
+                                    <h3 class="capitalize text-2xl ">trusted & legal</h3>
+                                    <p class="mt-5 text-xl italic">
+                                        pull request for bugs and features are more then welcome.
+                                    </p>
+                                </div>
+                                 <div class="rounded-xl p-8  text-textColor bg-cardBack">
+                                    <h3 class="capitalize text-2xl">low cost & experincel</h3>
+                                    <p class="mt-5 text-xl italic">
+                                        pull request for bugs and features are more then welcome.
+                                    </p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-textColor  mx-20 mt-14">
+                <p class="font-bold text-4xl">
+                    Honour to be recognized by:
+                </p>
+                <p class="text-2xl mt-5 pr-28">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  when an unknown printer took a galley of type and scrambled  it to make a type specimen book. It has survived.
+                </p>
+            </div>
+            <div class="banner mx-24 mt-32 p-8 rounded-3xl bg-importantTextColor ">
+                <h2 class="title text-3xl text-white">
+                    Get your free consultation
+                </h2>
+                <p class="describe text-cardBack mt-3 text-xl">
+                    Our attorneys will happily give a professional and just advice to your problems, our clients are the reason we’re here.  Get your completely free advice today from us no hidden fee, our doors are open from Monday – Friday
+                </p>
+                <div class="flex space-x-8 mt-8">
+                    <a href="#" class="text-white text-2xl bg-textColor px-10 py-2 rounded-3xl ">
+                         contact
+                    </a>
+                    <a href="#" class="text-textColor text-2xl bg-white px-10 py-2 rounded-3xl ">
+                         about us
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-8 mx-20">
+            <div class="title text-importantTextColor">
+                <i class="text-3xl font-bold">
+                    Featured News, Events and Articles 
+                </i>
+            </div>
+            <div class="grid  md:grid-cols-2 px-3 gap-4 mt-12 lg:grid-cols-3 sm:grid-cols-1">
+                 <div class="element">
+                    <article >
+                        <h2 class="title text-3xl ">
+                            article or event title
+                        </h2>
+                        <div class="img-handler mt-5">
+                            <img src="https://www.snacknation.com/wp-content/uploads/2019/09/company-team-building.jpg" class="rounded-xl" alt="">
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="date italic text-importantTextColor">
+                                published on  13.06.2021
+                            </div>
+                            <div class="news italic text-importantTextColor">
+                                <p>
+                                    News
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                 </div>
+                 <div class="element">
+                    <article >
+                        <h2 class="title text-3xl ">
+                            article or event title
+                        </h2>
+                        <div class="img-handler mt-5">
+                            <img src="https://www.snacknation.com/wp-content/uploads/2019/09/company-team-building.jpg" class="rounded-xl" alt="">
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="date italic text-importantTextColor">
+                                published on  13.06.2021
+                            </div>
+                            <div class="news italic text-importantTextColor">
+                                <p>
+                                    News
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                 </div>
+                 <div class="element">
+                    <article >
+                        <h2 class="title text-3xl ">
+                            article or event title
+                        </h2>
+                        <div class="img-handler mt-5">
+                            <img src="https://www.snacknation.com/wp-content/uploads/2019/09/company-team-building.jpg" class="rounded-xl" alt="">
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="date italic text-importantTextColor">
+                                published on  13.06.2021
+                            </div>
+                            <div class="news italic text-importantTextColor">
+                                <p>
+                                    News
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                 </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-footerBg pt-3 mt-8 px-20 text-textColor">
+        <div class="grid  md:grid-cols-3 px-3 gap-4 mt-12 lg:grid-cols-6 sm:grid-cols-1 sm:flex lg:flex lg:justify-start  justify-center">
+            <div class="text-3xl font-bold">
+                Logo
+            </div>
+            <div class="location flex justify-between ">
+                <div class="icon text-importantTextColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2A11.013 11.013 0 0 0 5 13a10.889 10.889 0 0 0 2.216 6.6s.3.395.349.452L16 30l8.439-9.953c.044-.053.345-.447.345-.447l.001-.003A10.885 10.885 0 0 0 27 13A11.013 11.013 0 0 0 16 2Zm0 15a4 4 0 1 1 4-4a4.005 4.005 0 0 1-4 4Z"/><circle cx="16" cy="13" r="4" fill="none"/></svg>
+                </div>
+                <ul class="ml-3">
+                    <li>3rd Floor, Green Oil Building </li>
+                    <li>Quartier fouda. opposite hotel juvence 2000 P.O . Box</li>
+                    <li>3331 Yaounde - cameroun</li>
+                </ul>
+            </div>
+            <div class="phone-numbers text-importantTextColor">
+                <ul class="">
+                    <li class="flex justify-between">
+                        <span class="mr-4 text-importantTextColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435c.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712c-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414L9.586 7L8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414L19.586 17l-2.006 2.005z"/></svg>
+                        </span>
+                        <p >
+                            (+237) 222 23 70 50
+                        </p>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="mr-4 text-importantTextColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435c.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712c-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414L9.586 7L8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414L19.586 17l-2.006 2.005z"/></svg>
+                        </span>
+                        <p>
+                            (+237) 670 50 66 68 
+                        </p>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="mr-4 text-importantTextColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="currentColor" d="M32 13.08v13.63l-7.36-7.36l-1.41 1.41L30.46 28H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 12.37a2 2 0 0 0 2.82 0l8.83-8.78a7.44 7.44 0 0 1-2-.85l-8.26 8.21L5.31 8h17.5a7.49 7.49 0 0 1-.31-2H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12.2a7.45 7.45 0 0 1-2 .88Z" class="clr-i-outline--badged clr-i-outline-path-1--badged"/><circle cx="30" cy="5.86" r="5" fill="currentColor" class="clr-i-outline--badged clr-i-outline-path-2--badged clr-i-badge"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                        </span>
+                        <p>
+                            info@dugalaw.com
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="links text-textColor">
+                <ul class="">
+                    <h3 class="text-xl font-bold">Quick links </h3>
+                    <li><a href="#" class="capitalize text-xl font-bold text-textColor"> about us</a></li>
+                    <li><a href="#" class="capitalize text-xl text-textColor font-bold"> practice area</a></li>
+                </ul>
+            </div>
+            <div class="links text-textColor">
+                <ul class="">
+                    <li><a href="#" class="capitalize text-xl font-bold text-textColor"> carreers</a></li>
+                    
+                    <li><a href="#" class="capitalize text-xl font-bold text-textColor"> contact us</a></li>
+                </ul>
+            </div>
+            <div class="text-textColor ">
+                <ul class="ml-3">
+                    <span class="capitalize font-bold text-xl">news</span>
+                    <div class="media-links flex space-x-3 justify-between space-y-3">
+                        <li class="mt-3">
+                            <a href="#">
+                                
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M17.316 6.246c.008.162.011.326.011.488c0 4.99-3.797 10.742-10.74 10.742c-2.133 0-4.116-.625-5.787-1.697a7.577 7.577 0 0 0 5.588-1.562a3.779 3.779 0 0 1-3.526-2.621a3.858 3.858 0 0 0 1.705-.065a3.779 3.779 0 0 1-3.028-3.703v-.047a3.766 3.766 0 0 0 1.71.473a3.775 3.775 0 0 1-1.168-5.041a10.716 10.716 0 0 0 7.781 3.945a3.813 3.813 0 0 1-.097-.861a3.773 3.773 0 0 1 3.774-3.773a3.77 3.77 0 0 1 2.756 1.191a7.602 7.602 0 0 0 2.397-.916a3.789 3.789 0 0 1-1.66 2.088a7.55 7.55 0 0 0 2.168-.594a7.623 7.623 0 0 1-1.884 1.953z"/></svg>
+                        
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48c27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+       </div>
+       <div class="flex justify-center mt-5 pb-3 font-bold text-xl ">
+        copyright 2022 Dugalaw. All right reserved
+       </div>
+    </footer>
+</body>
+</html>
